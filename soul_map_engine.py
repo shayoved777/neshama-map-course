@@ -47,7 +47,7 @@ def generate_soul_map(gregorian_date):
     traits = personal_traits[mazal]
 
     personal_message = (
-        f"נולדת בתאריך העברי {heb_date.month_name()
+       f"נולדת בתאריך העברי {heb_date.day} בחודש {heb_date.hebrew_month_name()} בשנת {heb_date.year}, במזל {mazal}.\n"
 }, במזל {mazal}.\n"
         f"תכונות הנשמה שלך הן: {traits}.\n"
         f"הספירה הקבלית שלך היא {sfira}.\n"
