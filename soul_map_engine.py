@@ -58,8 +58,11 @@ def generate_soul_map(gregorian_date):
 
 st.title('מפת הנשמה האישית שלך')
 
-birthdate = st.date_input('בחר את תאריך הלידה שלך')
-
+birthdate = st.date_input(
+    'בחר את תאריך הלידה שלך',
+    min_value=datetime(1920, 1, 1),
+    max_value=datetime.today()
+)
 if st.button('קבל את מפת הנשמה'):
     result = generate_soul_map(birthdate)
     st.write(result)
