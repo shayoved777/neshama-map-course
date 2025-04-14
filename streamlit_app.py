@@ -122,7 +122,11 @@ st.markdown("#### מלא את פרטיך, והמערכת תפיק עבורך ת�
 with st.form("soul_form"):
     name = st.text_input("שם פרטי")
     mother = st.text_input("שם האם")
-    birthdate = st.date_input("תאריך לידה")
+    birthdate = st.date_input(
+    "תאריך לידה",
+    min_value=datetime(1900, 1, 1),
+    max_value=datetime.today()
+)
     question = st.text_area("שאלה פתוחה שמעסיקה אותך")
     submitted = st.form_submit_button("שלח וקבל תשובה חינמית")
 
